@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+        <!--icons-->
+        <script src="https://kit.fontawesome.com/d340e0cb0a.js" crossorigin="anonymous"></script>
+        <script src="validatecontact.js"></script>
+        <title>Seung Hee Daniel Lee's Portfolio</title>
+    </head>
+
+    <body>
+        <header>
+            <!-- CHANGE!!! -->
+            <nav class="top-nav" role="menubar" aria-label="Main Navigation">
+                <div class="nav-container">
+                    <div class="nav-name" role="menuitem"><a href="index.html">Daniel Lee</a></div>
+                    <div class="menu-items">
+                        <div class="socials">
+                            <a href="https://www.linkedin.com/in/seungheedaniellee/" target="_blank" role="menuitem"><i class="fab fa-linkedin fa-lg"></i></a>
+                            <a href="https://github.com/Dsl03" target="_blank" role="menuitem"><i class="fab fa-github fa-lg"></i></a>
+                            <a href="mailto:daniellee2025@u.northwestern.edu" target="_blank" role="menuitem"><i class="far fa-envelope fa-lg"></i></a>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><a href="index.html" role="menuitem">Home</a></li>
+                                <li><a href="index.html#projects" role="menuitem">Projects</a></li>
+                                <!--About Me will be a separate page-->
+                                <li><a href="aboutme.html" role="menuitem">About Me</a></li>
+                                <li><a href="SeungHee(Daniel)_Lee.pdf" target="_blank" role="menuitem">Resume</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="contactme-title">
+                <h1>Hi! Thanks for reaching out. I'm looking forward to chatting with you.</h1>
+                <p>
+                    ***PLEASE NOTE: this website is a work in progress. I have not yet set up the server to collect this form information.
+                    If you'd like to contact me, please email me at <u><a href="mailto:michaelluvin2022@u.northwestern.edu">michaelluvin2022@u.northwestern.edu</a></u>.
+                    Thanks!
+                </p>
+            </div>
+            <div class="contact-page">
+                <div>
+                    <form onsubmit="validateForm()">
+                        <label for="fname">First name:*</label><br>
+                        <input type="text" id="fname" name="fname" placeholder="First Name" onchange="validateName('fname')" required aria-required="true">
+                        <span id="fname-error-text"></span><br>
+                        <label for="lname">Last name:*</label><br>
+                        <input type="text" id="lname" name="lname" placeholder="Last Name" onchange="validateName('lname')"required aria-required="true">
+                        <span id="lname-error-text"></span><br>
+                        <label for="user-email">Your email:*</label><br>
+                        <input type="email" id="user-email" name="user-email" placeholder="Your email" onchange="validateEmail()" required aria-required="true">
+                        <span id="email-error-text"></span><br>
+                        <label for="you-are">You are a(n):*</label><br>
+                        <select name="you-are" id="you-are" required aria-required="true">
+                            <option value="none" selected disabled hidden>
+                                Select
+                            </option>
+                            <option value="company-employee">Company employee</option>
+                            <option value="recruiter">Recruiter</option>
+                            <option value="student">Student</option>
+                            <option value="other">Other</option>
+                        </select><br>
+                        <label for="msg">Message:*</label><br>
+                        <textarea rows="8" cols="60 "id="msg" name="msg" placeholder="Your Message Here" required aria-required="true"></textarea><br>
+                        <span>* = Required</span><br><br>
+                        <input class="button" type="submit" value="Submit">
+                        <input class="button" type="reset" value="Reset">
+                    </form>
+                </div>
+                <div>
+                    <img class="contact-pg-img" src="img/hello.gif" alt="GIF of a walrus popping out of the water saying hi">
+                </div>
+            </div>
+            <footer>
+                <div class="footer-container">
+                    <h1>Seung Hee Daniel Lee</h1>
+                    <h3><i>Hoping to stay connected?</i></h3>
+                    <p>
+                        If you would like to get in touch
+                        fill out <a href="contactme.html" class="contact-link"><u>this contact form</u></a>
+                    </p>
+                    <p>
+                        Or send me an email at <a href="mailto:daniellee2025@u.northwestern.edu" class="read-more"><u>daniellee2025[at]u[dot]northwestern[dot]edu</u></a>
+                    </p>
+                </div>
+            </footer>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,369 @@
+html {
+    font-family: 'Quicksand', sans-serif;
+    scroll-behavior: smooth;
+}
+main {
+    margin-top: 70px;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+p {
+    font-size: 18px;
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+nav.top-nav {
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    box-shadow: 0px 4px 4px #0003;
+    padding-left: 2em;
+    padding-right: 2em;
+    z-index: 1;
+}
+
+.nav-container {
+    user-select: none;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* space divs evenly, spanning entire width of container */
+    justify-content: space-between;
+}
+
+.nav-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.menu-items {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.socials {
+    padding: 5px;
+}
+.socials a i {
+    transition: transform .2s;
+    padding: 3px;
+}
+
+.socials a i:hover {
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2);
+}
+
+nav.top-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav.top-nav li {
+    font-weight: bold;
+    color: rgb(161, 161, 161);
+    margin: 5px;
+    display: inline-block;
+    padding: 5px;
+    position: relative;
+}
+
+nav.top-nav li a, li a:link, li a:visited {
+    color: rgb(161, 161, 161);
+}
+
+nav.top-nav li a:hover {
+    color: black;
+}
+
+.selected {
+    color: black !important;
+}
+/* nav.top-nav li:active{
+    color: #fff
+} */
+
+.intro-container {
+    /* dimensions are 3372x1339 -> 0.3971 */
+    background-image: url("img/intro.jpg");
+    background-size: cover;
+    height: 550px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.intro-text {
+    position: relative;
+    top: -15px;
+    margin: 100px;
+    width: 40%;
+}
+
+.intro-text h1 {
+    font-size: 40px;
+}
+#projects {
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding-top: 30px;
+
+}
+#projects h1 {
+    font-size: 32px;
+}
+
+.project-entry-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 70px;
+}
+
+.project-entry-text {
+    text-align: left;
+    width: 30%;
+    padding: 30px;
+}
+
+.read-more:hover {
+    color: grey;
+}
+
+.project-entry-img {
+    height: 300px;
+    width: 560px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px #0003;
+    text-align: center;
+    position: relative;
+}
+
+.project-entry-img:after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background: rgba(0,0,0,.5);
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border-radius: 15px;
+}
+/* .project-entry-img:hover {
+    background-color: black;
+    -moz-transition: all 1s;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+} */
+
+.project-entry-img:hover:after {
+    opacity: 1;
+}
+.project-entry-img img {
+    border-radius: 15px;
+    height: 300px;
+    width: 560px;
+}
+.project-entry-img a {
+    position: relative;
+    bottom: 170px;
+    visibility: hidden;
+    font-size: 20px;
+    user-select: none;
+    color: white;
+    z-index: 1;
+}
+
+/* .project-entry-img a {
+    color: white;
+} */
+
+.project-entry-img:hover a{
+    visibility: visible;
+}
+
+.project-entry-img a:hover{
+    color: lightgrey;
+}
+
+footer {
+    background-color:   #836EAA;
+    height: 280px;
+    color: white;
+}
+
+.footer-container {
+    margin: 100px;
+    padding-top: 0.8em;
+    font-size: 125%;
+}
+
+.footer-container h3 {
+    font-weight: normal;
+}
+
+.contact-link, .contact-link:link, .contact-link:visited {
+    color: white;
+}
+
+.contact-link:hover {
+    color: black;
+}
+
+/* contact page */
+.contactme-title {
+    text-align: center;
+    padding-top: 10px;
+    margin: auto;
+    width: 1025px;
+}
+.contact-page {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-pg-img {
+    width: 400px;
+    margin-left: 100px;
+    border-radius: 15px;
+}
+
+input {
+    font-size: 14px;
+    font-family: 'Quicksand', sans-serif;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+
+textarea {
+    font-size: 14px;
+    font-family: 'Quicksand', sans-serif;
+    padding: 5px;
+    border-radius: 5px;
+    resize: none;
+}
+
+select {
+    font-size: 14px;
+    font-family: 'Quicksand', sans-serif;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.button {
+    background-color:  #7ae0ff;/* #6fc9fc; */
+    font-weight: bold;
+    border-radius: 2em;
+    color: white;
+    padding: 0.5em 1.5em;
+    border: none;
+    /* taken from https://www.w3schools.com/css/css3_buttons.asp */
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 5px 0 rgba(0,0,0,0.19);
+    margin-right: 10px;
+}
+
+.button:hover {
+    background-color: #60b2e0;
+}
+
+/* aboutme page */
+.aboutme-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 1100px;
+    margin-top: 120px;
+    justify-content: center;
+    align-items: center;
+    line-height: 175%;
+}
+
+.aboutme-pic {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+}
+
+.aboutme-text {
+    padding-left: 80px;
+}
+
+.aboutme-text h1 {
+    font-size: 32px;
+}
+
+/* individual project pages */
+.project-page-content {
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 750px;
+}
+
+.project-page-content h2 {
+    font-size: 32px;
+    margin-top: 50px;
+    margin-bottom: -5px;
+}
+
+.project-page-content h3 {
+    font-size: 24px;
+    margin-bottom: -5px;
+
+}
+.project-title {
+    position: relative;
+    text-align: center;
+    top: 30px;
+    padding-bottom: 40px;
+}
+
+.project-title h1 {
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+
+.project-title p {
+    margin-top: 0px;
+}
+
+.project-page-img img{
+    width: 750px;
+    border-radius: 20px;
+}
+
+.project-description {
+    margin-top: 50px;
+    line-height: 175%;
+}
+
+.project-description li, p  {
+    font-size: 18px;
+}

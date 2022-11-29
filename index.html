@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <!--icons-->
+        <script src="https://kit.fontawesome.com/d340e0cb0a.js" crossorigin="anonymous"></script>
+        <script src="projects.js"></script>
+        <title>Seung Hee Daniel Lee's Portfolio</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="top-nav" role="menubar" aria-label="Main Navigation">
+                <div class="nav-container">
+                    <div class="nav-name" role="menuitem"><a href="index.html">Seung Hee Daniel Lee</a></div>
+                    <div class="menu-items">
+                        <div class="socials">
+                            <!-- CHANGE THISSSSS -->
+                            <a href="https://www.linkedin.com/in/seungheedaniellee/" target="_blank" role="menuitem"><i class="fab fa-linkedin fa-lg"></i></a>
+                            <a href="https://github.com/Dsl03" target="_blank" role="menuitem"><i class="fab fa-github fa-lg"></i></a>
+                            <a href="mailto:daniellee2025@u.northwestern.edu" target="_blank" role="menuitem"><i class="far fa-envelope fa-lg"></i></a>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><a href="index.html" role="menuitem" class="selected">Home</a></li>
+                                <li><a href="#projects" role="menuitem">Projects</a></li>
+                                <!--About Me will be a separate page-->
+                                <li><a href="aboutme.html" role="menuitem">About Me</a></li>
+                                <li><a href="SeungHee(Daniel)_Lee.pdf" target="_blank" role="menuitem">Resume</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="intro-container" aria-label="Intro Image and Text">
+                <!-- CHANGE THIS!!! -->
+                <span role="img" aria-label="Background photo, a headshot of Mike Luvin on the Northwestern Lakefill"> </span>
+                <div class="intro-text">
+                    <h1>Hi, I'm Daniel!</h1>
+                    <p>
+                        I'm an aspiring software engineer majoring in Computer Science and minoring in Data Science at Northwestern University. I'll be an incoming
+                        interning at Google as a Software Engineering (STEP) Intern in Summer 2023. I'm passionate about building software that makes a difference in people's lives.
+                    </p>
+                    <p><span><a href="aboutme.html" class="read-more">Learn More <i class="fas fa-long-arrow-alt-right"></i></a></p>
+                </div>
+            </div>
+            <section id="projects" aria-label="Project List">
+                <h1>Projects</h1>
+
+            </section>
+            <footer>
+                <div class="footer-container">
+                    <h1>Seung Hee Daniel Lee</h1>
+                    <h3><i>Hoping to stay connected?</i></h3>
+                    <p>
+                        If you would like to get in touch
+                        fill out <a href="contactme.html" class="contact-link"><u>this contact form</u></a>
+                    </p>
+                    <p>
+                        Or send me an email at <a href="mailto:daniellee2025@u.northwestern.edu" class="read-more"><u>daniellee2025[at]u[dot]northwestern[dot]edu</u></a>
+                    </p>
+                </div>
+            </footer>
+        </main>
+    </body>
+
+    <script>
+        generateProjects(projects, '#projects');
+    </script>
+
+</html>
