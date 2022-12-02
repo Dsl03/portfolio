@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+        <!--icons-->
+        <script src="https://kit.fontawesome.com/d340e0cb0a.js" crossorigin="anonymous"></script>
+        <title>Seung Hee Daniel Lee's Portfolio</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="top-nav" role="menubar" aria-label="Main Navigation">
+                <div class="nav-container">
+                    <div class="nav-name" role="menuitem"><a href="../index.html">Seung Hee Daniel Lee</a></div>
+                    <div class="menu-items">
+                        <div class="socials">
+                            <a href="https://www.linkedin.com/in/seungheedaniellee/" target="_blank" role="menuitem"><i class="fab fa-linkedin fa-lg"></i></a>
+                            <a href="https://github.com/Dsl03" target="_blank" role="menuitem"><i class="fab fa-github fa-lg"></i></a>
+                            <a href="mailto:daniellee2025@u.northwestern.edu" target="_blank" role="menuitem"><i class="far fa-envelope fa-lg"></i></a>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><a href="../index.html" role="menuitem">Home</a></li>
+                                <li><a href="../index.html#projects" role="menuitem">Projects</a></li>
+                                <!--About Me will be a separate page-->
+                                <li><a href="../aboutme.html" role="menuitem">About Me</a></li>
+                                <li><a href="SeungHee(Daniel)_Lee.pdf" target="_blank" role="menuitem">Resume</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="project-page-content">
+                <div class="project-title" aria-label="Project Title">
+                    <h1><a href="https://jointrack.club" target="_blank">Git-Meta Open Source</a></h1>
+                </div>
+                <div class="project-page-img" aria-label="Project image">
+                    <img src="../img/jointrack.JPG" alt="Picture of jointrack.club webpage">
+                </div>
+                <div class="project-description" aria-label="Project Description">
+                    <h2>TL;DR</h2>
+                    <p>If you don't have the time to read my blog post project description below, here's a quick overview.</p>
+                    <ul>
+                        <li>We wanted to improve integration of new members into NU Track Club's communication stream</li>
+                        <li>New members need to be added to our Listserv (mailing list) and GroupMe: adding 50+ people is a bit of a hassle</li>
+                        <li>So a teammate and I created a sign up page for NU Track Club to ease this process</li>
+                        <li>Users sign in to their NU Gmail through Google Auth, which adds them to the Listserv</li>
+                        <li>Users then sign in to their GroupMe account, adding them to the NUTC GroupMe</li>
+                        <li>Finally, users are provided a link to IMLeagues to sign up to become a member of Track Club</li>
+                    </ul>
+                    <p>What did <i>I</i> do, in terms of <b>development?</b></p>
+                    <ul>
+                        <li>Utilized the GroupMe Developers' API to add an authenicated user to the NUTC GroupMe
+                            <ul>
+                                <li>Verified that the user had an NU email address with the Google API</li>
+                                <li>Parsed user information returned by GroupMe API to create the HTTP POST request
+                                    to add the user to the GroupMe
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Implemented a SQLite database that stores all the users who have signed up through jointrack.club with their UTC timestamp
+                            <ul>
+                                <li>Included methods for adminstrative actions, such as adding page abusers to the blocked list</li>
+                            </ul>
+                        </li>
+                        <li>Set up the admin page: admin identity verified through the Google API with every call to our server
+                            <ul>
+                                <li>Verify that the user is, in fact, an admin on our Python Flask server every time the user
+                                    attempts an admin action
+                                </li>
+                                <li>Admins can view and add admins</li>
+                                <li>Admins can view all page users, view blocked users, and add/remove blocked users</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <p>
+                        We got the page up and running in time for the Fall 2020 Student Organization Fair, where ~45 new members
+                        used the page!
+                    </p>
+                    <p>Now...if you'd like to read more about how the development process went, continue below!</p>
+
+                    <h2>Background</h2>
+                    <!--probably want to put in a pic for each section-->
+                    <p>
+                        A fellow NUTC Member (well, 2020 grad), John Laboe, wanted to create an all-in-one sign up page for the club.
+                        When a new member joins the club, they provide us their email for our mailing list and their phone number so they can be added
+                        to our GroupMe. They must also sign up for the club on IMLeagues in order to attend practice. <br><br>
+                        Manually adding everyone to our mailing list and GroupMe is a bit of a hassle--why not have a sign up page to
+                        streamline the process?
+
+                    </p>
+                    <h2>Development</h2>
+                    <p>
+                        Join Track was my first web development project ever. I had just decided to switch my focus to Software Engineering the
+                        month before (in June 2020), after realizing how much I enjoyed programming. Was I behind my peers since I didn't take a CS
+                        class until my sophomore year? Yes, but I knew I could make up the gap because of how passionate I am about CS. To complete Join Track,
+                        I knew that I would have to learn a lot on my own (with some guidance from John, of course), and I was excited for the challenge.
+                    </p>
+                    <h3>An API...what's that?</h3>
+                    <p>
+                        My first task was to use the GroupMe Developers' API to add a user to the NUTC GroupMe. John told me that I needed to set up a
+                        Python Flask server to do so. He sent me links to the GM API and Flask documentation, and then I was on my own. There were so many things
+                        I was confused about...what the heck is an API? (So that's how those Trump Twitter bots are made...) An HTTP Request? (the WWW runs on em!)
+                        Why do we need to add a user on our own server instead of doing it on the front-end? (Why would we want everyone to see our GM access tokens?)
+                        If nothing else (there was *plenty* of "else"), this project significantly improved my Google search skills.
+                    </p>
+                    <div class="project-page-img">
+                        <img src="../img/flask_gm.JPG" alt="Picture of the Python Flask and GroupMe logos">
+                    </div>
+                    <p>
+                        Eventually, after reading lots of articles on Google, I figured out how to set up a Flask App in Python and create an endpoint where I would
+                        add a user to the GroupMe. In the endpoint, I sent an HTTP request to the GM API to get the signed in user's information, then extracted their
+                        name and username from the response object. I created a JSON object with the required information to add the user to the group, as specified in
+                        the GM Developers' documentation. Finally, I sent that JSON object in a HTTP POST request to the GM API endpoint used to add a user to the group.
+                    </p>
+                    <p>
+                        John created a test GroupMe group, to which I was supposed to get added. However, I could not seem to get it to work, despite my debugging
+                        efforts. It turns out that I had formatted the URL of the HTTP POST request incorrectly (oops, happens when you're new to this): I put the
+                        group ID in the wrong place. Once that was fixed, I got added to our test group. My first task was complete!
+                    </p>
+                    <p>
+                        <!-- FILL TEXT -->
+                    </p>
+                    <h3>Unfamiliar Technologies: the S(e)Q(ue)L</h3>
+                    <p>
+                        <!-- FILL TEXT -->
+                    </p>
+                    <p>
+                        <!-- FILL TEXT -->
+                    </p>
+                    <h3>What could have been...</h3>
+                    <p>
+                        <!-- FILL TEXT -->
+                    </p>
+                    <h2>Results</h2>
+                    <p>
+                        <!-- FILL TEXT -->
+                    </p>
+                    <p>
+                        <!-- FILL TEXT -->
+                    </p>
+                </div>
+            </section>
+
+            <footer>
+                <div class="footer-container">
+                    <h1>Seung Hee Daniel Lee</h1>
+                    <h3><i>Hoping to stay connected?</i></h3>
+                    <p>
+                        If you would like to get in touch
+                        fill out <a href="contactme.html" class="contact-link"><u>this contact form</u></a>
+                    </p>
+                    <p>
+                        Or send me an email at <a href="mailto:daniellee2025@u.northwestern.edu" class="read-more"><u>daniellee2025[at]u[dot]northwestern[dot]edu</u></a>
+                    </p>
+                </div>
+            </footer>
+        </main>
+    </body>
+</html>

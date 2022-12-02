@@ -2,35 +2,29 @@
     will contain the JS for generating the project previews
 */
 
-var projects = [
+let projects = [
+    {
+        name: "Git-Meta Open Source",
+        date: "Summer 2022",
+        description: "Contributed to the Two Sigma Git-Meta Open Source Library as part of the Two Sigma College Mentor Connect Program.",
+        link: "projects/gitmeta.html",
+        image: "images/git-meta.png",
+        alt: "Picture of git-meta github page"
+    },
+
     {
         name: "Sentiment-19",
         date: "Spring 2022",
         description: "Developed interactive heat map of US States showing sentiment towards COVID-19 based on scraped Tweets ",
-        link: "projects/pacecalc.html",
+        link: "projects/sentiment19.html",
         image: "images/sentiment19.png",
-        alt: "Picture of sentiment19  webpage"
-    },
-    {
-        name: "2048 Game",
-        date: "Winter 2022",
-        description: "Developed a working copy of the 2048 game for my final project for CS 211 (Fundamentals of Programming II).",
-        link: "projects/jointrack.html",
-        image: "images/jointrack.JPG",
-        alt: "Picture of jointrack.club homepage"
+        alt: "Picture of sentiment19 webpage"
     },
 
-    /* starting w two for now
-    {
-        name: "COVID MLB Fantasy League",
-        date: "Summer 2020",
-        description: "Developed a sign up page for NU Track Club"
-    }
-    */
     ];
 
     function generateProjects(projects, projectSelector) {
-        var projectPlace = document.querySelector(projectSelector);
+        let projectPlace = document.querySelector(projectSelector);
         if (projectPlace) {
             if (projects instanceof Array) {
                 for (let project of projects) {
