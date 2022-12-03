@@ -143,6 +143,17 @@ nav.top-nav li a:hover {
     font-size: 32px;
 }
 
+.career {
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding-top: 30px;
+
+}
+
+.career h1 {
+    font-size: 32px;
+}
 .project-entry-container {
     display: flex;
     flex-direction: row;
